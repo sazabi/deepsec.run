@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a problem with DeepSec.run.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Issues are public. Do not include repository names, source code, scan reports,
+        credentials, or details of an unpatched vulnerability. For security reports,
+        use the private instructions in SECURITY.md.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the behavior and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Use a public or disposable test repository and remove private details.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+    validations:
+      required: false
