@@ -1,0 +1,24 @@
+{
+  "name": "@sazabi/deepsec-run-core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The trust core of deepsec.run: what runs inside the sandbox, what leaves it, and what the model key can reach",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "typecheck:local": "tsc --noEmit",
+    "lint": "oxlint . && oxfmt --check '**/*.{ts,tsx,js,jsx,json}'",
+    "lint:fix": "oxlint --fix . && oxfmt '**/*.{ts,tsx,js,jsx,json}'"
+  },
+  "dependencies": {
+    "@vercel/sandbox": "^2.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "typescript": "7.0.2"
+  }
+}
